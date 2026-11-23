@@ -22,5 +22,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
-    private fun initRecyclerView()
+
+    private fun init() {
+        initRecyclerView()
+        controller = Controller(this)
+    }
+
+    private fun initRecyclerView() {
+        binding.myRecyclerView.layoutManager = LinearLayoutManager(this)
+    }
 }
